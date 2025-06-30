@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Management System</h1>
+
+    <!-- Enroll Students -->
+    <div class="form-section">
+      <h2>Enroll Student</h2>
+      <input type="text" id="name" placeholder="Student Name">
+      <input type="text" id="id" placeholder="Student ID">
+      <button onclick="addStudent()">➕ Enroll</button>
+    </div>
+
+    <!-- Manage Students -->
+    <div class="form-section">
+      <h2>Manage Student</h2>
+      <input type="text" id="searchId" placeholder="Enter Student ID">
+      <input type="text" id="grade" placeholder="Grade (A-F)">
+      <button onclick="markAttendance()">✅ Mark Attendance</button>
+      <button onclick="assignGrade()">🏅 Assign Grade</button>
+      <button onclick="deleteStudent()">🗑️ Delete</button>
+    </div>
+
+    <!-- Student Records -->
+    <div class="student-list">
+      <h2>📋 Enrolled Students</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th><th>Name</th><th>Attendance</th><th>Grade</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Teacher Announcements -->
+    <div class="message-board">
+      <h2>📢 Teacher Announcements</h2>
+      <textarea id="announcementInput" placeholder="Enter announcement..."></textarea>
+      <button onclick="postAnnouncement()">📨 Post Message</button>
+      <div id="announcementList"></div>
+    </div>
+
+    <!-- Student Queries -->
+    <div class="message-board">
+      <h2>🧑‍🎓 Student Queries</h2>
+      <input type="text" id="studentName" placeholder="Your Name">
+      <textarea id="studentQuery" placeholder="Enter your question..."></textarea>
+      <button onclick="submitStudentQuery()">📨 Submit Query</button>
+      <div id="studentQueryList"></div>
+    </div>
+
+    <!-- Parent Feedback -->
+    <div class="message-board">
+      <h2>👨‍👩‍👧 Parent Feedback</h2>
+      <input type="text" id="parentName" placeholder="Your Name">
+      <textarea id="parentFeedback" placeholder="Enter your feedback..."></textarea>
+      <button onclick="submitParentFeedback()">📨 Submit Feedback</button>
+      <div id="parentFeedbackList"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
